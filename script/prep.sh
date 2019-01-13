@@ -2,10 +2,9 @@
 
 # This installs the base instructions up to the point of joining / creating a cluster
 
-#The newest version of docker may not worth with kubernetes, please change version to the latest compatible version
-#ToDo replace version with an env variable
-export VERSION=18.06.1 \
-curl -sSL get.docker.com | sh && \
+# The newest version of docker may not worth with kubernetes, please change version to the latest compatible version
+# ToDo replace version with an env variable
+export VERSION=18.06.1 &&curl -sSL get.docker.com | sh && \
   sudo usermod pi -aG docker
 
 sudo dphys-swapfile swapoff && \
